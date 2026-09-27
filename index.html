@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Divya Light — Be Someone's Light</title>
 <meta name="description" content="Divya Light is a community humanitarian initiative — giving time, kindness, and care to people, animals and the earth.">
+<link rel="icon" type="image/png" href="fav.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --cream:#FBF6EC; --paper:#FFFDF9; --sage:#7C9473; --sage-dark:#5E7355;
+  --cream:#FBF6EC; --paper:#FFFDF9; --sage:#2C5E3B; --sage-dark:#1E3F27;
   --gold:#E3A857; --earth:#8B6F52; --ink:#3A3530; --ink-soft:#6B655C;
   --line:rgba(58,53,48,0.10);
   box-sizing:border-box;
@@ -28,19 +29,27 @@ a{color:inherit;text-decoration:none}
 section{padding:110px 0}
 @media(max-width:640px){section{padding:72px 0}}
 
-/* sticky top wrapper containing both header and scrolling banner */
-.top-sticky-wrapper{position:sticky;top:0;z-index:100;width:100%}
-
-/* header */
-header{background:rgba(251,246,236,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;max-width:1120px;margin:0 auto}
+/* STICKY HEADER CONFIGURATION */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(251,246,236,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;max-width:1120px;margin:0 auto}
 .logo{display:flex;align-items:center;gap:8px}
-.logo img{height:40px;width:auto;object-fit:contain}
+
+/* Increased Header Logo Size */
+.logo img{height:60px;width:auto;object-fit:contain}
+
 .nav-links{display:flex;gap:30px;align-items:center}
 .nav-links a{font-size:0.95rem;color:var(--ink-soft);transition:color .25s}
 .nav-links a:hover{color:var(--sage-dark)}
-.help-btn{background:var(--sage);color:#fff;padding:11px 22px;border-radius:100px;font-weight:600;font-size:.92rem;border:none;cursor:pointer;box-shadow:0 0 0 0 rgba(124,148,115,0.5);transition:box-shadow .3s,transform .2s}
-.help-btn:hover{box-shadow:0 0 22px 4px rgba(124,148,115,0.45);transform:translateY(-1px)}
+.help-btn{background:var(--sage);color:#fff;padding:11px 22px;border-radius:100px;font-weight:600;font-size:.92rem;border:none;cursor:pointer;box-shadow:0 0 0 0 rgba(44,94,59,0.5);transition:box-shadow .3s,transform .2s}
+.help-btn:hover{box-shadow:0 0 22px 4px rgba(44,94,59,0.45);transform:translateY(-1px)}
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
 .hamburger span{width:24px;height:2px;background:var(--ink)}
 .mobile-menu{display:none;flex-direction:column;gap:2px;background:var(--paper);border-top:1px solid var(--line);padding:8px 28px 20px}
@@ -104,7 +113,7 @@ header{background:rgba(251,246,236,0.95);backdrop-filter:blur(10px);border-botto
 @media(max-width:860px){.grid{grid-template-columns:1fr}}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:32px;transition:transform .3s, box-shadow .3s}
 .card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(58,53,48,0.08)}
-.card .icon{width:44px;height:44px;border-radius:12px;background:rgba(124,148,115,0.14);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.card .icon{width:44px;height:44px;border-radius:12px;background:rgba(44,94,59,0.14);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
 .card h3{font-size:1.15rem;margin-bottom:10px;font-weight:600}
 .card p{font-size:.96rem}
 .card-click{cursor:pointer;text-align:left;font:inherit;color:inherit}
@@ -133,7 +142,7 @@ header{background:rgba(251,246,236,0.95);backdrop-filter:blur(10px);border-botto
 .story-card .who{margin-top:18px;font-weight:600;font-size:.9rem;color:var(--ink)}
 
 /* suggestions */
-.suggestion-box{background:linear-gradient(135deg,rgba(124,148,115,0.10),rgba(227,168,87,0.10));border-radius:24px;padding:52px;text-align:left}
+.suggestion-box{background:linear-gradient(135deg,rgba(44,94,59,0.10),rgba(227,168,87,0.10));border-radius:24px;padding:52px;text-align:left}
 .suggestion-box h2{font-size:clamp(1.7rem,3vw,2.2rem);max-width:560px}
 .form-btn{margin-top:26px;display:inline-block;background:var(--sage);color:#fff;padding:15px 28px;border-radius:100px;font-weight:600}
 
@@ -144,7 +153,10 @@ footer{background:var(--sage-dark);color:rgba(255,255,255,.92);padding:64px 0 34
 footer h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;opacity:.75;margin-bottom:14px;font-family:'Manrope',sans-serif;font-weight:700}
 footer a,footer p{color:rgba(255,255,255,.82);font-size:.92rem}
 footer .flinks{display:flex;flex-direction:column;gap:9px}
-footer .logo img{height:38px;width:auto;margin-bottom:12px;object-fit:contain}
+
+/* Increased Footer Logo Size */
+footer .logo img{height:55px;width:auto;margin-bottom:12px;object-fit:contain}
+
 .foot-bottom{border-top:1px solid rgba(255,255,255,.18);margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem;opacity:.75}
 .foot-disclaimer{font-size:.8rem;opacity:.7;max-width:640px;margin-top:14px}
 
@@ -166,32 +178,17 @@ footer .logo img{height:38px;width:auto;margin-bottom:12px;object-fit:contain}
 .modal p{font-size:.92rem}
 .modal-close{position:absolute;top:16px;right:20px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--ink-soft)}
 .modal.detail{max-width:500px;text-align:left}
-.modal.detail .icon{width:44px;height:44px;border-radius:12px;background:rgba(124,148,115,0.14);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.modal.detail .icon{width:44px;height:44px;border-radius:12px;background:rgba(44,94,59,0.14);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
 
 :focus-visible{outline:2px solid var(--sage-dark);outline-offset:2px}
 </style>
 </head>
 <body>
 
-<div class="top-sticky-wrapper">
-  <header>
-    <nav class="nav">
-      <a href="#home" class="logo"><img src="logod.png" alt="Divya Light Logo"></a>
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#mission">Our Mission</a>
-        <a href="#humanity">Humanity</a>
-        <a href="#earth">Mother Earth</a>
-        <a href="#contribute">Contributions</a>
-        <a href="#stories">Stories</a>
-        <a href="#suggestions">Suggestions</a>
-        <button class="help-btn" onclick="openModal()">Help to Feed</button>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-    <div class="mobile-menu" id="mobileMenu">
+<header>
+  <nav class="nav">
+    <a href="#home" class="logo"><img src="logod.png" alt="Divya Light Logo"></a>
+    <div class="nav-links">
       <a href="#home">Home</a>
       <a href="#mission">Our Mission</a>
       <a href="#humanity">Humanity</a>
@@ -199,21 +196,34 @@ footer .logo img{height:38px;width:auto;margin-bottom:12px;object-fit:contain}
       <a href="#contribute">Contributions</a>
       <a href="#stories">Stories</a>
       <a href="#suggestions">Suggestions</a>
-      <button class="help-btn" style="margin-top:14px;width:100%" onclick="openModal()">Help to Feed</button>
+      <button class="help-btn" onclick="openModal()">Help to Feed</button>
     </div>
-  </header>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#mission">Our Mission</a>
+    <a href="#humanity">Humanity</a>
+    <a href="#earth">Mother Earth</a>
+    <a href="#contribute">Contributions</a>
+    <a href="#stories">Stories</a>
+    <a href="#suggestions">Suggestions</a>
+    <button class="help-btn" style="margin-top:14px;width:100%" onclick="openModal()">Help to Feed</button>
+  </div>
+</header>
 
-  <div class="marquee">
-    <div class="marquee-track">
-      <span>Small acts. Big difference.</span>
-      <span>Humanity begins with us.</span>
-      <span>You don't need to be rich to help someone.</span>
-      <span>Do something today for humanity.</span>
-      <span>Small acts. Big difference.</span>
-      <span>Humanity begins with us.</span>
-      <span>You don't need to be rich to help someone.</span>
-      <span>Do something today for humanity.</span>
-    </div>
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Small acts. Big difference.</span>
+    <span>Humanity begins with us.</span>
+    <span>You don't need to be rich to help someone.</span>
+    <span>Do something today for humanity.</span>
+    <span>Small acts. Big difference.</span>
+    <span>Humanity begins with us.</span>
+    <span>You don't need to be rich to help someone.</span>
+    <span>Do something today for humanity.</span>
   </div>
 </div>
 
@@ -313,12 +323,12 @@ footer .logo img{height:38px;width:auto;margin-bottom:12px;object-fit:contain}
       <p style="margin-top:14px">Real humanitarian work happens in ordinary moments. Here are a few ways anyone can take part, starting today.</p>
     </div>
     <div class="grid">
-      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(0)" onkeydown="if(event.key==='Enter')openDetail(0)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.5-4 4-6 7-6s5.5 2 7 6"/></svg></div><h3>Spend time with someone lonely</h3><p>A visit, a phone call, or simply sitting with someone can mean more than any gift.</p><span class="card-more">Learn more</span></div>
-      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(1)" onkeydown="if(event.key==='Enter')openDetail(1)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><path d="M8 10c0-2.5 2-4 4-4s4 1.5 4 4c0 3-4 4-4 7"/><circle cx="12" cy="20" r="0.6" fill="#5E7355"/></svg></div><h3>Listen, without rushing to fix</h3><p>Sometimes the most helpful thing is to truly hear someone out.</p><span class="card-more">Learn more</span></div>
-      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(2)" onkeydown="if(event.key==='Enter')openDetail(2)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><path d="M4 12h16M4 12l4-4M4 12l4 4"/></svg></div><h3>Help an elderly person</h3><p>Carrying groceries, running an errand, or checking in regularly.</p><span class="card-more">Learn more</span></div>
-      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(3)" onkeydown="if(event.key==='Enter')openDetail(3)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><path d="M3 12h18M12 3v18"/></svg></div><h3>Support workers in difficulty</h3><p>A fair word, a fair wage, or simply noticing someone's struggle.</p><span class="card-more">Learn more</span></div>
-      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(4)" onkeydown="if(event.key==='Enter')openDetail(4)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><path d="M12 21c-4-2-8-6-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5-4 9-8 11Z"/></svg></div><h3>Care for animals</h3><p>Feeding strays, fostering, or simply treating animals with gentleness.</p><span class="card-more">Learn more</span></div>
-      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(5)" onkeydown="if(event.key==='Enter')openDetail(5)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><path d="M4 20h16M6 20V10l6-6 6 6v10"/></svg></div><h3>Solve a practical problem</h3><p>Fixing something broken, sharing a skill, or offering to help sort a task out.</p><span class="card-more">Learn more</span></div>
+      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(0)" onkeydown="if(event.key==='Enter')openDetail(0)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.5-4 4-6 7-6s5.5 2 7 6"/></svg></div><h3>Spend time with someone lonely</h3><p>A visit, a phone call, or simply sitting with someone can mean more than any gift.</p><span class="card-more">Learn more</span></div>
+      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(1)" onkeydown="if(event.key==='Enter')openDetail(1)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M8 10c0-2.5 2-4 4-4s4 1.5 4 4c0 3-4 4-4 7"/><circle cx="12" cy="20" r="0.6" fill="#1E3F27"/></svg></div><h3>Listen, without rushing to fix</h3><p>Sometimes the most helpful thing is to truly hear someone out.</p><span class="card-more">Learn more</span></div>
+      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(2)" onkeydown="if(event.key==='Enter')openDetail(2)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M4 12h16M4 12l4-4M4 12l4 4"/></svg></div><h3>Help an elderly person</h3><p>Carrying groceries, running an errand, or checking in regularly.</p><span class="card-more">Learn more</span></div>
+      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(3)" onkeydown="if(event.key==='Enter')openDetail(3)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M3 12h18M12 3v18"/></svg></div><h3>Support workers in difficulty</h3><p>A fair word, a fair wage, or simply noticing someone's struggle.</p><span class="card-more">Learn more</span></div>
+      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(4)" onkeydown="if(event.key==='Enter')openDetail(4)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M12 21c-4-2-8-6-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5-4 9-8 11Z"/></svg></div><h3>Care for animals</h3><p>Feeding strays, fostering, or simply treating animals with gentleness.</p><span class="card-more">Learn more</span></div>
+      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(5)" onkeydown="if(event.key==='Enter')openDetail(5)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M4 20h16M6 20V10l6-6 6 6v10"/></svg></div><h3>Solve a practical problem</h3><p>Fixing something broken, sharing a skill, or offering to help sort a task out.</p><span class="card-more">Learn more</span></div>
     </div>
   </div>
 </section>
@@ -331,10 +341,10 @@ footer .logo img{height:38px;width:auto;margin-bottom:12px;object-fit:contain}
       <p style="margin-top:14px">Caring for humanity includes caring for the ground beneath us. Here's where to begin.</p>
     </div>
     <div class="grid">
-      <div class="card fade-up"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div><h3>Clean a public space</h3><p>Even ten minutes clearing litter from a park or street adds up.</p></div>
-      <div class="card fade-up"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><path d="M12 22V10M12 10C8 10 6 7 6 4c3 0 6 2 6 6Zm0 0c0-4 3-6 6-6 0 3-2 6-6 6Z"/></svg></div><h3>Plant and care for trees</h3><p>Plant one, or simply water and protect the ones already growing.</p></div>
-      <div class="card fade-up"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><path d="M6 7h12M9 7V4h6v3M8 7l1 13h6l1-13"/></svg></div><h3>Reduce waste</h3><p>Reuse, compost, and think twice before something goes in the bin.</p></div>
-      <div class="card fade-up"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8ZM9 8V6a3 3 0 0 1 6 0v2"/></svg></div><h3>Avoid unnecessary plastic</h3><p>Carry your own bag or bottle — a habit that compounds over years.</p></div>
+      <div class="card fade-up"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div><h3>Clean a public space</h3><p>Even ten minutes clearing litter from a park or street adds up.</p></div>
+      <div class="card fade-up"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M12 22V10M12 10C8 10 6 7 6 4c3 0 6 2 6 6Zm0 0c0-4 3-6 6-6 0 3-2 6-6 6Z"/></svg></div><h3>Plant and care for trees</h3><p>Plant one, or simply water and protect the ones already growing.</p></div>
+      <div class="card fade-up"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M6 7h12M9 7V4h6v3M8 7l1 13h6l1-13"/></svg></div><h3>Reduce waste</h3><p>Reuse, compost, and think twice before something goes in the bin.</p></div>
+      <div class="card fade-up"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8ZM9 8V6a3 3 0 0 1 6 0v2"/></svg></div><h3>Avoid unnecessary plastic</h3><p>Carry your own bag or bottle — a habit that compounds over years.</p></div>
     </div>
   </div>
 </section>
@@ -469,22 +479,22 @@ document.getElementById('heroSlider').addEventListener('mouseleave',resetTimer);
 
 /* humanity detail popups */
 const humanityDetails=[
-  {icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.5-4 4-6 7-6s5.5 2 7 6"/></svg>',
+  {icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.5-4 4-6 7-6s5.5 2 7 6"/></svg>',
    title:'Spend time with someone lonely',
    body:'Loneliness is one of the quietest struggles people face, especially among the elderly, the widowed, or those living far from family. You don\u2019t need a plan — a short visit, a regular phone call, or simply sitting with someone over tea can lift their whole week. Try setting a recurring reminder to check in on one person, even for ten minutes. Consistency matters more than the length of the visit.'},
-  {icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><path d="M8 10c0-2.5 2-4 4-4s4 1.5 4 4c0 3-4 4-4 7"/><circle cx="12" cy="20" r="0.6" fill="#5E7355"/></svg>',
+  {icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M8 10c0-2.5 2-4 4-4s4 1.5 4 4c0 3-4 4-4 7"/><circle cx="12" cy="20" r="0.6" fill="#1E3F27"/></svg>',
    title:'Listen, without rushing to fix',
    body:'Not every problem needs a solution right away — sometimes people just need to feel heard. When someone shares a struggle, resist the urge to jump straight to advice. Ask a genuine follow-up question, hold eye contact, and let silence sit instead of filling it. Being fully present, without judgement or a rush to respond, is a form of care that\u2019s often more valuable than any fix.'},
-  {icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><path d="M4 12h16M4 12l4-4M4 12l4 4"/></svg>',
+  {icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M4 12h16M4 12l4-4M4 12l4 4"/></svg>',
    title:'Help an elderly person',
    body:'Small physical tasks can become genuinely hard with age — carrying groceries, climbing stairs, or navigating paperwork and technology. Offer to run an errand, walk with them to an appointment, or simply check that they have what they need for the week. If you know an elderly neighbour living alone, a regular knock on the door means more than most people realise.'},
-  {icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><path d="M3 12h18M12 3v18"/></svg>',
+  {icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M3 12h18M12 3v18"/></svg>',
    title:'Support workers in difficulty',
    body:'Delivery riders, domestic workers, daily-wage labourers and small vendors often go unseen even though their work touches our daily lives. Supporting them can be as simple as paying fairly and on time, offering water or shade on a hot day, treating them with basic respect, or speaking up when you see someone being mistreated. Noticing someone\u2019s struggle out loud is often the first step to real help.'},
-  {icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><path d="M12 21c-4-2-8-6-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5-4 9-8 11Z"/></svg>',
+  {icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M12 21c-4-2-8-6-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5-4 9-8 11Z"/></svg>',
    title:'Care for animals',
    body:'Stray and vulnerable animals rely entirely on human kindness. Keeping a bowl of water outside during summer, feeding a neighbourhood stray, volunteering at a local shelter, or fostering an animal in need are all meaningful acts. Even reporting an injured or mistreated animal to a local rescue group can save a life. Gentleness toward animals reflects the same humanity we hope to show people.'},
-  {icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7355" stroke-width="1.6"><path d="M4 20h16M6 20V10l6-6 6 6v10"/></svg>',
+  {icon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M4 20h16M6 20V10l6-6 6 6v10"/></svg>',
    title:'Solve a practical problem',
    body:'Sometimes the most valuable help is a skill, not a sum of money — fixing a leaking tap, helping someone draft a resume, teaching a relative to use a smartphone, or untangling a piece of bureaucracy. Think about what you\u2019re already good at, then offer it to someone who\u2019s stuck. A single afternoon of your expertise can save someone weeks of struggle.'}
 ];
